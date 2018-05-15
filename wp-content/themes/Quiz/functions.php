@@ -68,7 +68,22 @@ function tailor_addScript(){
 	//scripts
 	wp_register_script('jquery', get_template_directory_uri() .'/js/jquery.min.js',true);
 	wp_register_script('bootstrapjs', get_template_directory_uri() .'/js/bootstrap.min.js',true);
+	wp_register_script('app', get_template_directory_uri() .'/js/app.js',true);
     wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrapjs' );
+	wp_enqueue_script( 'app' );
 	}
 add_action('wp_enqueue_scripts','tailor_addScript');
+
+function myphpinformation_scripts() {    
+
+
+    if( !is_admin()){
+ wp_deregister_script('jquery');
+ wp_register_script('jquery', get_stylesheet_directory_uri() . '/js/jquery.min.js', false);
+ wp_enqueue_script('jquery');
+}
+
+}
+
+add_action( 'wp_enqueue_scripts', 'myphpinformation_scripts' );

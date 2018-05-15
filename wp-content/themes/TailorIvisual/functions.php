@@ -68,7 +68,11 @@ function tailor_addScript(){
 	//scripts
 	wp_register_script('jquery', get_template_directory_uri() .'/js/jquery.min.js',true);
 	wp_register_script('bootstrapjs', get_template_directory_uri() .'/js/bootstrap.min.js',true);
+	wp_register_script('fbapp', get_template_directory_uri() . '/js/s.js', '', '',true);
     wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrapjs' );
+	wp_enqueue_script('fbapp');
 	}
 add_action('wp_enqueue_scripts','tailor_addScript');
+
+//Adding custom scripts in post page

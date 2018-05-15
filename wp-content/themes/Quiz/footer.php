@@ -1,0 +1,1 @@
+<button onclick="fbLogoutUser()" id="logout" style="visibility: hidden">Logout</button>
