@@ -1,0 +1,17 @@
+{
+    "name": "root/quiz-download",
+    "description": "Quiz Plugin By ramesh",
+    "type": "project",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "rameshkrr",
+            "email": "rameshkrr652@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\":"./inc"}
+    }
+}
